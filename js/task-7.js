@@ -8,6 +8,6 @@ function onInputChangeSize(event) {
   //   console.log(event.currentTarget.value);
   changableInput.setAttribute(
     'style',
-    `font-size: ${1 + event.currentTarget.value}px;`,
+    `font-size: ${event.currentTarget.value}px;`,
   );
 }

@@ -18,7 +18,7 @@ const images = [
 
 const galaryRef = document.getElementById('gallery');
 galaryRef.classList.add('gallery');
-
+const uniteImgRef = '';
 // const elements = images.map(({ url, alt }) => {
 //   const elementRef = document.createElement('li');
 //   elementRef.classList.add('elem-item');
@@ -34,11 +34,10 @@ galaryRef.classList.add('gallery');
 //   return elementRef;
 // });
 
-const elements = images.map(({ url, alt }) => {
-  galaryRef.insertAdjacentHTML(
-    'afterbegin',
-    `<li><img src = '${url}' alt = '${alt}' width = 370></li>`,
-  );
-
-  return galaryRef;
-});
+const elements = images
+  .map(
+    ({ url, alt }) =>
+      `<li><img src = '${url}' alt = '${alt}' width = 370></li>`,
+  )
+  .join();
+galaryRef.insertAdjacentHTML('afterbegin', elements);
